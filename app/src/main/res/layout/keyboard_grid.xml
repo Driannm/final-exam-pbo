@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/keyboard_grid"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    android:backgroundTint="@color/md_theme_surfaceContainer"
+    app:cardElevation="6dp"
+    tools:context=".KeyboardGridAdapter">
+
+    <!-- Kontainer utama menggunakan LinearLayout untuk fleksibilitas -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="8dp"
+        android:background="@color/md_theme_surfaceContainer">
+
+        <!-- Gambar item flowchart -->
+        <ImageView
+            android:id="@+id/img_keyboard_grid"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="1mm"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            tools:srcCompat="@tools:sample/avatars"
+            android:background="@drawable/rounded_shape"
+            android:clipToOutline="true" />
+
+        <!-- Nama flowchart -->
+        <TextView
+            android:id="@+id/name_keyboard_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:text="Nama Flowchart"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_semibold"
+            android:textColor="@color/md_theme_inverseSurface"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/price_keyboard_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_gravity="center"
+            app:layout_constraintStart_toStartOf="@+id/name_keyboard_grid"
+            app:layout_constraintTop_toBottomOf="@+id/name_keyboard_grid"
+            android:textStyle="bold"
+            android:fontFamily="@font/inter_medium"
+            android:textSize="10sp"
+            android:textColor="@color/md_theme_primary"
+            android:text="Keterangan Flowchart" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

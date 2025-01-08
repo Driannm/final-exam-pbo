@@ -1,0 +1,81 @@
+<resources>
+    <string name="app_name">J.Bytes Mechanical</string>
+
+    <!--Menu String-->
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="profile">My Profile</string>
+    <string name="about">About</string>
+
+    <!--Curiculum Vitae-->
+    <string name="nama">Yuda Andrian</string>
+    <string name="deskripsi">Yuda Andrian</string>
+    <string name="isideskripsi">Saya adalah mahasiswa Teknik Komputer semester 5 yang berdedikasi dan antusias dengan minat yang kuat pada Komputasi Awan. Selama masa studi saya, saya telah membangun dasar yang kuat dalam ilmu komputer dan teknologi, dan mengembangkan keterampilan teknis yang relevan melalui berbagai proyek akademis dan pengalaman praktis.</string>
+    <string name="no_hp">Phone\t  : 0822-1630-8189</string>
+    <string name="email">Email\t\t  : yuda.studying@gmail.com</string>
+    <string name="job"><![CDATA[Mahasiswa Teknik Komputer Semester 5]]></string>
+    <string name="skil1">•\t Backend Developer</string>
+    <string name="skil2">•\t DevOps</string>
+    <string name="skil3">•\t Cloud Computing</string>
+    <string name="klik">Butuh informasi lebih lanjut? \Bagikan\!</string>
+    <string name="bagikan">Bagikan!</string>
+
+    <!--App Details-->
+    <string name="about_desc">J-Byte Mechanical is an innovative e-commerce application specifically designed to sell various custom keyboard parts. With J-Byte Mechanical, users can easily find high-quality components such as keycaps, switches, PCBs, casings, and additional accessories for mechanical keyboards.</string>
+    <string name="sosial">Also check our social media, if you have any criticism or suggestions you can submit them there.</string>
+
+    <!--Product Descriptions-->
+    <string name="odin_spec">- Plate: Default includes 3 plates (Polycarbonate/FR4/Aluminium)\n- PCB: change to 1.6 mm Non-flex cut Hot-swap PCB\n- Color options: Pine Green/Mocha/Burgundy three new colors are available</string>
+    <string name="corgi_spec">- Typing angel: 7.5°\n- 65% Alice layout\n- E-coating Aluminum Top and bottom case\n- Aluminum wrist rest x1\n- Foam gasket mount\- 1.2mm Tri-mode flex-cut PCB, support per-key RGB\n</string>
+    <string name="altair_spec">- 7° typing angle\n- 900g total weight\n- Aprx 144 x 108 x 28mm\n- 1.2mm hotswap PCB\n- Aluminum chassis\n- PC plate\n- Brass weight only\n- PCB gasket mount\n- E-White, Dark Grey, and Rose Gold</string>
+    <string name="tiger_spec">- 7° Typing angle\n- USB-C interface\n- 1.6mm thickness\n- Non-Flex cut\n- Per key RGB\n- 8K Polling Rate\n- Support QMK and Tofix\n- Function row F1-F1\n- Bottom row with 6.25U spacebar</string>
+    <string name="kbd8x_spec">– Dual Mounting System: Top Mount/Silicone Gasket\n- Case material: Aluminum (anodized/e-coating)\n- Layout: WKL/WK\n- Weight bar: Stainless Steel/Copper/Brass\n- PCB: 1.2 mm hot-swap, ANSI layout, Non-flex cut, NKRO,  USB-C interface, QMK/VIAL supported, includes Caps Lock key/ Scroll Lock key RGB LED indicator\n- Plate: Polycarbonate (non-flex cut)/FR4/Aluminum/Carbon fiber\n- Typing angle: 7 degree\n- Dimension: 358 x 139 x 32.5 x 17.5 mm (rubber feet height  around 1.9 mm)\n- Weight: Around 2.7Kg (built with keycaps, stainless steelweight  bar)\n- Keycaps: PBTfans Soul Blossom - Base (SKU:PT56-1)</string>
+    <string name="tofu65_spec">- Case material: Aluminum (anodized and electrostatically coated process)\n- Plate: PC/ Aluminum/ FR4/ Carbon fiber plate\n- PCB: 1.2 mm Flex cut Hot-swap PCB/1.2 mm Non-Flex cut Solder PCB, supports per-key RGB, QMK firmware, VIA support, USB-C port, with daughterboard+JST cable\n- Structure: Top mount, silicone socks, silicone bowl\n- Weight: ≈1.7 kg after assembly\n- Dimension: 313.7 mm (length) x 115.7 mm (width) x 18.5 mm (front) x 32.5 mm (back)\n- Typing angle: 7°</string>
+    <string name="yakeylt_spec">- 193 keys\n- Profile: Cherry profile\n Material: PBT material\n- Production Method: Dye-sublimated\n- Friendly Reminder: Only keycaps included, no keyboard\n- Compatible with Cherry MX switches and MX-style clones</string>
+    <string name="circus_spec">- Profile: PGA profile\n- Material: ABS material\n- Production Method: doubleshot\n- Base kit: 151keys\n- Friendly Reminder: Only keycaps included, no keyboard\n- Compatible with Cherry MX switches and MX-style clones</string>
+    <string name="national_spec">- Profile: PGA profile\n- Material: ABS material\n- Production Method: doubleshot\n- Base kit: 151keys\n- Friendly Reminder: Only keycaps included, no keyboard\n- Compatible with Cherry MX switches and MX-style clones</string>
+    <string name="night_spec">- 127 keys\n- Profile: XDA profile\n- Material: PBT material\n- Production Method: Dye-sublimated\n- Friendly Reminder: Only keycaps included, no keyboard\n- Compatible with Cherry MX switches and MX-style clones</string>
+    <string name="retros_spec">- Mounting style: Gasket\n- Case material：Aluminum 6063 CNC\n- Finish：Powder spraying\n- Layout：65% ANSI Layout\n- Connection：USB Type-C\n- PCB: 1.2mm/1.6mm fla-cut/non-flex-cut hotswap PCB\n- Plate: Black FR4，Horizontal flex cut/Aluminium，no flex cut/PC, no flex cut\n- Typing angle: 5 degree\n- Dimension: approximately 332*125*32mm\n- Keyboard Weight: Approximately 1.4KG before built / Approximately 1.8KG after built\n- Plate foam: INOAC Poron3.5mm\n- Switch Pad: IXPE 0.5mm\n- Bottom Foam: INOAC Poron 2mm</string>
+
+    <!--Product Image-->
+    <integer-array name="product_image">
+        <item>@drawable/corgi_fairlady_alice</item>
+        <item>@drawable/altair</item>
+        <item>@drawable/tiger_lite_gaming</item>
+        <item>@drawable/kbd8x_mkiii</item>
+        <item>@drawable/tofu65</item>
+        <item>@drawable/retros</item>
+        <item>@drawable/tut_yakeylt</item>
+        <item>@drawable/circus</item>
+        <item>@drawable/national_rhyme</item>
+        <item>@drawable/night_owl</item>
+    </integer-array>
+
+    <!--Product Names-->
+    <string-array name="product_name">
+        <item>Corgi Fairlady Alice</item>
+        <item>ALTAIR-X</item>
+        <item>Tiger Lite Gaming</item>
+        <item>KBD8X MKIII</item>
+        <item>Tofu65 2.0</item>
+        <item>80Retros GAME1989</item>
+        <item>Yakeylt Keycaps Set</item>
+        <item>Circus Keycaps Set</item>
+        <item>National Keycaps Set</item>
+        <item>Night Owl Keycaps Set</item>
+    </string-array>
+
+    <!--Product Price-->
+    <string-array name="product_price">
+        <item>$219.00</item>
+        <item>$315.00</item>
+        <item>$49.99</item>
+        <item>$298.66</item>
+        <item>$128.00</item>
+        <item>$159.00</item>
+        <item>$74.00</item>
+        <item>$49.00</item>
+        <item>$49.00</item>
+        <item>$15.00</item>
+    </string-array>
+</resources>

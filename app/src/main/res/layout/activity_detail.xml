@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KeyboardDetailActivity">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/tv_detailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Detail Keyboard"
+        android:textAlignment="center"
+        android:textColor="@color/md_theme_primary"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter_semibold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ImageView for Detail -->
+    <ImageView
+        android:id="@+id/iv_detailImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerInside"
+        tools:srcCompat="@drawable/altair"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_detailTitle"
+        android:background="@drawable/rounded_shape"
+        android:clipToOutline="true" />
+
+    <ImageView
+        android:id="@+id/iv_imgPreview3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@drawable/corgi_prev_3"
+        android:layout_marginStart="240dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_detailImage"
+        android:background="@drawable/rounded_shape"
+        android:clipToOutline="true" />
+
+    <ImageView
+        android:id="@+id/iv_imgPreview2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@drawable/corgi_prev_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_detailImage"
+        android:background="@drawable/rounded_shape"
+        android:clipToOutline="true" />
+
+    <ImageView
+        android:id="@+id/iv_imgPreview1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="240dp"
+        android:scaleType="centerCrop"
+        tools:srcCompat="@drawable/corgi_prev_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_detailImage"
+        android:background="@drawable/rounded_shape"
+        android:clipToOutline="true" />
+
+    <!-- Specs Label -->
+    <TextView
+        android:id="@+id/changes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Specs: "
+        android:textColor="@color/md_theme_primary"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/inter_medium"
+        android:layout_marginTop="4dp"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_imgPreview1" />
+
+    <!-- Specs Content TextView -->
+    <TextView
+        android:id="@+id/tv_detailDesc2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:layout_marginTop="-10dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:text="@string/tiger_spec"
+        android:textAlignment="viewStart"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/changes" />
+
+    <!-- Buy Button -->
+    <Button
+        android:id="@+id/btn_buy"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/md_theme_primaryContainer"
+        android:text="Buy"
+        android:textColor="@color/md_theme_inverseSurface"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="160dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="8dp"
+        android:backgroundTint="@color/md_theme_surfaceContainer"
+        android:text="Back"
+        android:textColor="@color/md_theme_inverseSurface"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
