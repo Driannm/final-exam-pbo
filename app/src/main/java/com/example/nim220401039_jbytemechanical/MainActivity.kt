@@ -22,16 +22,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         rvKeyboard = findViewById(R.id.rv_keyboard)
         rvKeyboard.setHasFixedSize(true)
 
         list.addAll(getKeyboard())
-        showRecyclerList()
+        showRecyclerView(isGrid = false)
     }
 
     private fun getKeyboard(): ArrayList<Keyboard> {
@@ -39,66 +41,50 @@ class MainActivity : AppCompatActivity() {
         val dataImg = resources.obtainTypedArray(R.array.product_image)
         val dataPrice = resources.getStringArray(R.array.product_price)
         val listKeyboard = ArrayList<Keyboard>()
+
         for (i in dataName.indices) {
-            val keyboard =
-                Keyboard(dataName[i], dataPrice[i], dataImg.getResourceId(i, -1))
+            val keyboard = Keyboard(dataName[i], dataPrice[i], dataImg.getResourceId(i, -1))
             listKeyboard.add(keyboard)
         }
+
+        dataImg.recycle() // Hindari memory leak
         return listKeyboard
     }
 
-    private fun showRecyclerList() {
-        rvKeyboard.layoutManager = LinearLayoutManager(this)
-        val listKeyboardAdapter = KeyboardListAdapter(list)
-        rvKeyboard.adapter = listKeyboardAdapter
-    }
+    private fun showRecyclerView(isGrid: Boolean) {
+        rvKeyboard.layoutManager =
+            if (isGrid) GridLayoutManager(this, 2) else LinearLayoutManager(this)
+        val adapter = if (isGrid) KeyboardGridAdapter(list) else KeyboardListAdapter(list)
+        rvKeyboard.adapter = adapter
 
-    private fun showRecyclerGrid() {
-        rvKeyboard.layoutManager = GridLayoutManager(this, 2)
-        val GridKeyboardAdapter = KeyboardGridAdapter(list)
-        rvKeyboard.adapter = GridKeyboardAdapter
-
-        GridKeyboardAdapter.onItemClick = { keyboard ->
-            // Menavigasi ke FlowchartDetailActivity dan mengirim data flowchart
-            val intent = Intent(this, KeyboardDetailActivity::class.java)
-            intent.putExtra("keyboard_data", keyboard)
-            startActivity(intent)
+        if (isGrid) {
+            (adapter as KeyboardGridAdapter).onItemClick = { keyboard ->
+                val intent = Intent(this, KeyboardDetailActivity::class.java)
+                intent.putExtra("keyboard_data", keyboard)
+                startActivity(intent)
+            }
         }
     }
 
     private fun showAbout() {
-        val intent = Intent(this, AboutActivity::class.java)
-        startActivity(intent)
+        startActivity(Intent(this, AboutActivity::class.java))
     }
 
     private fun showProfile() {
-        val intent = Intent(this, CiruculumVitaeActivity::class.java)
-        startActivity(intent)
+        startActivity(Intent(this, CiruculumVitaeActivity::class.java))
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.menu_utama, menu)
+        menuInflater.inflate(R.menu.menu_utama, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.list -> {
-                showRecyclerList()
-            }
-
-            R.id.grid -> {
-                showRecyclerGrid()
-            }
-
-            R.id.about -> {
-                showAbout()
-            }
-
-            R.id.profile -> {
-                showProfile()
-            }
+            R.id.list -> showRecyclerView(isGrid = false)
+            R.id.grid -> showRecyclerView(isGrid = true)
+            R.id.about -> showAbout()
+            R.id.profile -> showProfile()
         }
         return super.onOptionsItemSelected(item)
     }
