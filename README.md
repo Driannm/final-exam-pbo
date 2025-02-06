@@ -13,3 +13,11 @@
 - **Android RecyclerView** untuk menampilkan daftar item
 - **View Binding** untuk mempermudah manipulasi UI
 - **Material Design** untuk tampilan yang lebih modern
+
+## 🚀 Cara Menjalankan Aplikasi
+1. Clone repository ini:
+   ```bash
+   git clone https://github.com/Driannm/final-exam-pbo.git
+   ```
+2. Buka proyek di **Android Studio**
+3. Jalankan aplikasi menggunakan emulator atau perangkat fisik
