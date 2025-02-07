@@ -22,8 +22,8 @@
 2. Buka proyek di **Android Studio**
 3. Jalankan aplikasi menggunakan emulator atau perangkat fisik
 
-##🤝 Kontribusi
+## 🤝 Kontribusi
 Jika ingin berkontribusi pada proyek ini, silakan fork repository ini dan buat pull request dengan perubahan yang diusulkan.
 
-##📜 Lisensi
+## 📜 Lisensi
 Proyek ini menggunakan lisensi MIT. Silakan lihat file LICENSE untuk informasi lebih lanjut.
